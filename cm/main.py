@@ -1,7 +1,15 @@
-from flask import Flask
+from flask import Flask, request
+from pprint import pprint
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def index():
-  return "<h1>Welcome to CodingX</h1>"
+
+	data = pprint.pformat(request.form)
+ 	return '''<html><h1>Form</h1>
+ 		<from>
+ 		<input name='veryvar' />
+ 		<button />
+ 		</form>
+ 		</html>''' + data
