@@ -7,4 +7,9 @@ app = Flask(__name__)
 def index():
 
 	data = pprint.pformat(request.form)
- 	return "<h1>Welcome to CodingX</h1>" + data
+ 	return '''<html><h1>Form</h1>
+ 		<from>
+ 		<input name='veryvar' />
+ 		<button />
+ 		</form>
+ 		</html>''' + data
