@@ -41,18 +41,21 @@
 	</div>
 	<div class="row">
 		<div class="col-md-6 col-sm-12">
-			<form action="" method="post">
-			<div class="card m-1">
-			  <div class="card-header">
-			    Введите два числа
-			  </div>
-			  <div class="card-body">
-			  	<h6 class="card-subtitle mb-2 text-muted">можно использовать только положительные числа</h6>
-			    <input name='veryvar1' value="{{a}}"/>
-				<input name='veryvar2' value="{{b}}"/>
-				<button type="submit" class="btn btn-primary">Calculate</button>
-			  </div>
-			</div>
+			<form class="form-horizontal" action="" method="post">
+				<div class="card m-1">
+					<div class="card-header">
+						Введите два числа
+					</div>
+					<div class="card-body">
+						<h6 class="card-subtitle mb-2 text-muted">можно использовать только положительные числа</h6>
+						<input class="p-1 align-middle" name='veryvar1' value="{{a}}"/>
+						<input class="p-1 align-middle" name='veryvar2' value="{{b}}"/>
+						<button type="submit" class="btn btn-primary p-1 align-middle">Calculate</button>
+					</div>
+					{% if e %}
+						<div class="alert alert-danger m-2" role="alert">{{e|safe}}</div>
+					{% endif %}
+				</div>
 			</form>
 		</div>
 		<div class="col-md-6 col-sm-12">
@@ -69,7 +72,7 @@
 	</div>
 	<div class="row m-1">
 		<div class="col-md-12 text-center alert alert-secondary">
-			<footer>wise.init@gmail.com</footer>
+			<footer><a href="mailto:wise.init@gmail.com">wise.init@gmail.com</a></footer>
 		</div>
 	</div>
 </div>
