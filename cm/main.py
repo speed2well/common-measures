@@ -83,18 +83,17 @@ def index():
 	nod_result, nok_result = 0, 0
 
 	if request.method == "POST":
-		a = int(request.form.get("veryvar1"))
-		b = int(request.form.get("veryvar2"))
-	# else:
-	# 	data = request.form["veryvar"]
+		if isinstance(request.form.get("veryvar1"), int) and isinstance(request.form.get("veryvar2"), int):
+			a = int(request.form.get("veryvar1"))
+			b = int(request.form.get("veryvar2"))
 
 	if a > 0 and b > 0:
 		nok_result = nok(a, b) if a > b else nok(b, a) # меняем порядок параметров функции
 		nod_result = nod(a,b)
 
 	return render_template("index.html",
-        nok_result = nok_result,
-        nod_result = nod_result, a = a, b = b )
+		nok_result = nok_result,
+		nod_result = nod_result, a = a, b = b )
 
 	return '''<html><h1>"Least common multiple" and "Greatest common divisor"</h1>
 		<form action="" method="post">
