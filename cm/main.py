@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, render_template
 
 ''' наименьшее общее кратное '''
 
@@ -91,6 +91,10 @@ def index():
 	if a > 0 and b > 0:
 		nok_result = nok(a, b) if a > b else nok(b, a) # меняем порядок параметров функции
 		nod_result = nod(a,b)
+
+	return render_template("index.html",
+        nok_result = nok_result,
+        nod_result = nod_result, a = a, b = b )
 
 	return '''<html><h1>"Least common multiple" and "Greatest common divisor"</h1>
 		<form action="" method="post">
