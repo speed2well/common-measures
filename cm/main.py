@@ -35,7 +35,7 @@ def comult(n):
 			i += 1
 			overflow_exit(i)       
 	
-	assert len(rlist) != 0 , 'нет делителей - ваще'
+	# assert len(rlist) != 0 , 'нет делителей - ваще'
  
 	return rlist
 		
