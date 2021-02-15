@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Bootstrap 4, from LayoutIt!</title>
+    <title>LCM, GCD</title>
 
-    <meta name="description" content="Source code generated using layoutit.com">
+    <meta name="description" content="Least common multiple, Greatest common divisor. Layout generated using layoutit.com">
     <meta name="author" content="wise.init@gmail.com">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -20,9 +20,14 @@
     <link href="css/style.css" rel="stylesheet">
 
     <style>
+    	body {
+    		font-size: 14px;
+    	}
     	.text-responsive {
-		  font-size: calc(50% + 1vw + 1vh);
+		  font-size: calc(.5em + .5vw + .5vh);
 		}
+
+
     </style>
 
   </head>
@@ -48,8 +53,8 @@
 					</div>
 					<div class="card-body">
 						<h6 class="card-subtitle mb-2 text-muted">можно использовать только положительные числа</h6>
-						<input class="p-1 align-middle" name='veryvar1' value="{{a}}"/>
-						<input class="p-1 align-middle" name='veryvar2' value="{{b}}"/>
+						<input class="p-1 align-middle" type="number" min="2" step="1" pattern="[0-9]" name='veryvar1' value="{{a}}"/>
+						<input class="p-1 align-middle" type="number" min="2" step="1" pattern="[0-9]" name='veryvar2' value="{{b}}"/>
 						<button type="submit" class="btn btn-primary p-1 align-middle">Calculate</button>
 					</div>
 					{% if e %}
@@ -72,7 +77,7 @@
 	</div>
 	<div class="row m-1">
 		<div class="col-md-12 text-center alert alert-secondary">
-			<footer><a href="mailto:wise.init@gmail.com">wise.init@gmail.com</a></footer>
+			<footer class="text-responsive"><a href="mailto:wise.init@gmail.com" target="_blank">wise.init@gmail.com</a> <a href="https://github.com/speed2well" target="_blank"><img src="./static/img/github-icon.svg" width="36em" /></a></footer>
 		</div>
 	</div>
 </div>
